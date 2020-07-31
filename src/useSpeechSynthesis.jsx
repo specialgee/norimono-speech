@@ -14,9 +14,17 @@ const SpeechSynthesis = () => {
     onEnd,
   });
 
-  //const voice = voices[12];
-  const voice = voices[57];
-  console.log(voices)
+  //const voice = voices[12] || null;
+  //const voice = voices[57] || null;
+  let voice;
+  //console.log(voices)
+
+  voices.forEach(voiceIndex => {
+    if (voiceIndex.name === "Google 日本語") {
+      //console.log(voiceIndex)
+      voice = voiceIndex;
+    }
+  });
 
   const styleFlexRow = { display: 'flex', flexDirection: 'row' };
   const styleContainerRatePitch = {
@@ -111,7 +119,6 @@ const SpeechSynthesis = () => {
                   type="button"
                   onClick={() => {
                       speak({ text, voice, rate, pitch });
-                      console.log(voice);
                     }
                   }
                 >

@@ -73,6 +73,10 @@ button {
   text-align: center;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 button:focus {
   outline: none;
 }

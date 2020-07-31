@@ -14,7 +14,7 @@ const SpeechSynthesis = () => {
     onEnd,
   });
 
-  const voice = voices[12] || null;
+  const voice = voices[12];
 
   const styleFlexRow = { display: 'flex', flexDirection: 'row' };
   const styleContainerRatePitch = {
@@ -107,7 +107,11 @@ const SpeechSynthesis = () => {
               ) : (
                 <button
                   type="button"
-                  onClick={() => speak({ text, voice, rate, pitch })}
+                  onClick={() => {
+                      speak({ text, voice, rate, pitch });
+                      console.log(voice);
+                    }
+                  }
                 >
                   speak
                 </button>

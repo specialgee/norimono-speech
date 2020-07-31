@@ -14,7 +14,8 @@ const SpeechSynthesis = () => {
     onEnd,
   });
 
-  const voice = voices[12];
+  //const voice = voices[12];
+  const voice = voices[57];
   console.log(voices)
 
   const styleFlexRow = { display: 'flex', flexDirection: 'row' };

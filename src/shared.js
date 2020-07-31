@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   ${'' /* html {
     @import url('https://fonts.googleapis.com/css?family=Lato');
-    font-family: 'Impact', sans-serif;
+    font-family: 'Lato', sans-serif;
   } */}
 `;
 

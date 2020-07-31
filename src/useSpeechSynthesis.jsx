@@ -37,7 +37,7 @@ const SpeechSynthesis = () => {
     <Container>
       <div className="speech-wrapper">
         <form>
-          <h2>norimono</h2>
+          {/* <h2>norimono</h2> */}
           {!supported && (
             <p>
               Oh no, it looks like your browser doesn&#39;t support Speech
@@ -66,65 +66,70 @@ const SpeechSynthesis = () => {
                   </option>
                 ))}
               </select> */}
-              <div className="rate" style={styleContainerRatePitch}>
-                <div style={styleFlexRow}>
-                  <label htmlFor="rate">Rate: </label>
-                  <div className="rate-value">{rate}</div>
-                </div>
-                <input
-                  type="range"
-                  min="0.0"
-                  max="2"
-                  defaultValue="0.8"
-                  step="0.1"
-                  id="rate"
+              <div className="text-area">
+                <label className="message-label" htmlFor="message">テキスト</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={3}
+                  value={text}
                   onChange={(event) => {
-                    setRate(event.target.value);
+                    setText(event.target.value);
                   }}
                 />
-              </div>
-              <div className="pitch" style={styleContainerRatePitch}>
-                <div style={styleFlexRow}>
-                  <label htmlFor="pitch">Pitch: </label>
-                  <div className="pitch-value">{pitch}</div>
-                </div>
-                <input
-                  type="range"
-                  min="0"
-                  max="2"
-                  defaultValue="0.9"
-                  step="0.1"
-                  id="pitch"
-                  onChange={(event) => {
-                    setPitch(event.target.value);
-                  }}
-                />
-              </div>
-              <label className="message-label" htmlFor="message">テキスト</label>
-              <textarea
-                id="message"
-                name="message"
-                rows={3}
-                value={text}
-                onChange={(event) => {
-                  setText(event.target.value);
-                }}
-              />
-              {speaking ? (
-                <button type="button" onClick={cancel}>
-                  stop
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => {
-                      speak({ text, voice, rate, pitch });
+                {speaking ? (
+                  <button className="button-stop" type="button" onClick={cancel}>
+                    STOP
+                  </button>
+                ) : (
+                  <button
+                    className="button-speak"
+                    type="button"
+                    onClick={() => {
+                        speak({ text, voice, rate, pitch });
+                      }
                     }
-                  }
-                >
-                  speak
-                </button>
-              )}
+                  >
+                    SPEAK
+                  </button>
+                )}
+              </div>
+              <div className="slider-area">
+                <div className="rate" style={styleContainerRatePitch}>
+                  <div style={styleFlexRow}>
+                    <label htmlFor="rate">Rate: </label>
+                    <div className="rate-value">{rate}</div>
+                  </div>
+                  <input
+                    type="range"
+                    min="0.0"
+                    max="2"
+                    defaultValue="0.8"
+                    step="0.1"
+                    id="rate"
+                    onChange={(event) => {
+                      setRate(event.target.value);
+                    }}
+                  />
+                </div>
+                <div className="pitch" style={styleContainerRatePitch}>
+                  <div style={styleFlexRow}>
+                    <label htmlFor="pitch">Pitch: </label>
+                    <div className="pitch-value">{pitch}</div>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="2"
+                    defaultValue="0.9"
+                    step="0.1"
+                    id="pitch"
+                    onChange={(event) => {
+                      setPitch(event.target.value);
+                    }}
+                  />
+                </div>
+              </div>
             </React.Fragment>
           )}
         </form>

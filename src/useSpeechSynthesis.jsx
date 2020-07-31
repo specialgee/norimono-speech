@@ -15,6 +15,7 @@ const SpeechSynthesis = () => {
   });
 
   const voice = voices[12];
+  console.log(voices)
 
   const styleFlexRow = { display: 'flex', flexDirection: 'row' };
   const styleContainerRatePitch = {

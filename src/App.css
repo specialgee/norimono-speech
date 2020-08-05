@@ -23,24 +23,6 @@
   height: 100%;
 }
 
-button {
-  align-self: center;
-  border: 0px;
-  background-color: transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-size: 0.8em;
-}
-
-button:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-}
-
 /* SPEECH SYNTHESIS */
 .speech-wrapper {
   display: flex;
@@ -52,4 +34,5 @@ button:focus {
   border: 20px solid transparent;
   border-image: url("./assets/img/control-panel-frame.png") 30 round;
   background-color: rgb(210, 210, 210);
+  margin: 0;
 }

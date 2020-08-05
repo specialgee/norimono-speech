@@ -59,6 +59,7 @@ textarea {
   resize: auto;
   width: 600px;
   height: 250px;
+  background-color: #efefef;
 }
 
 textarea:focus {
@@ -71,9 +72,15 @@ button {
   width: 100%;
   max-width: 600px;
   text-align: center;
+  align-self: center;
+  border: 2px solid #afafaf;
+  background-color: #efefef;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 button:hover {
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -107,7 +114,7 @@ button:focus {
 
 .message-label {
   font-family: 'MPLUS1p-Medium', sans-serif;
-  font-size: 58px;
+  font-size: 84px;
   text-align: left;
   letter-spacing: 0.2em;
 }

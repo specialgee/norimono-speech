@@ -20,7 +20,7 @@ body {
   font-family: 'MPLUS1p-Medium', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow: auto;
   -webkit-touch-callout: none;  
   -webkit-user-select: none;
   user-select: none;
@@ -35,6 +35,10 @@ h2 {
   margin-top: 0;
 }
 
+h3 {
+  margin: 0;
+}
+
 label {
   display: block;
   font-weight: bold;
@@ -47,7 +51,7 @@ form {
 
 select,
 textarea {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 12px;
   width: 100%;
 }
@@ -70,13 +74,13 @@ button {
   font-family: 'MPLUS1p-Medium', sans-serif;
   font-size: 58px !important;
   width: 100%;
-  max-width: 600px;
   text-align: center;
   align-self: center;
   border: 2px solid #afafaf;
   background-color: #efefef;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 0.5em;
 }
 
 button:hover {
@@ -88,13 +92,17 @@ button:focus {
   outline: none;
 }
 
+/* APP */
+.app {
+  transform: translate(-90px, -150px) scale(0.7)
+}
+
 .speech-wrapper {
   margin: 0.5em;
   font-size: 44px;
 }
 
 .rate {
-  max-width: 300px;
   float: left;
   margin-right: 1.5em;
 }
@@ -104,8 +112,7 @@ button:focus {
 }
 
 .pitch {
-  margin-top: 1em;
-  max-width: 300px;
+  margin: 0;
 }
 
 .pitch-value {
@@ -210,3 +217,44 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #B6B6B6;
 }
+
+select {
+  width: 50%;
+}
+
+select:focus {
+  outline: none;
+}
+
+/* PARAMETERS */
+.parameters-panel {
+  /* position: absolute;
+  top: 20px;
+  right: 20px; */
+  border: 1px solid #000;
+  padding: 0.5em;
+}
+
+/* .body .parameters-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #000;
+  padding: 0.5em;
+}
+
+.script-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #000;
+  padding: 0.5em;
+}
+
+.body-panel {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid #000;
+  padding: 0.5em;
+} */

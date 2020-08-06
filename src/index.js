@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
-import SpeechSynthesisExample from './useSpeechSynthesis';
+import SpeechSynthesis from './SpeechSynthesis';
 import { GlobalStyles, Row } from './shared';
 
 const App = () => (
-  <div>
+  <div className="app">
     <GlobalStyles />
     <Row>
-      <SpeechSynthesisExample />
+      <SpeechSynthesis />
     </Row>
   </div>
 );

@@ -62,12 +62,16 @@ textarea {
   border: 1px solid darkgrey;
   resize: auto;
   width: 600px;
-  height: 250px;
+  height: 350px;
   background-color: #efefef;
 }
 
 textarea:focus {
   outline: none;
+}
+
+.text-area {
+  margin: 1em;
 }
 
 button {
@@ -94,12 +98,13 @@ button:focus {
 
 /* APP */
 .app {
+  max-width: 650px;
   transform: translate(-90px, -150px) scale(0.7)
 }
 
 .speech-wrapper {
   margin: 0.5em;
-  font-size: 44px;
+  font-size: 38px;
 }
 
 .rate {
@@ -233,6 +238,7 @@ select:focus {
   right: 20px; */
   border: 1px solid #000;
   padding: 0.5em;
+  visibility: hidden;
 }
 
 /* .body .parameters-panel {
@@ -258,3 +264,52 @@ select:focus {
   border: 1px solid #000;
   padding: 0.5em;
 } */
+
+.parameters-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.parameters-toggle p {
+  width: fit-content;
+}
+
+.parameters-toggle p:hover {
+  cursor: pointer;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

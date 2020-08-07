@@ -100,6 +100,7 @@ const SpeechSynthesis = (props) => {
                     type="button"
                     onClick={() => {
                         text = textArea.state.text;
+                        console.log(voice)
                         speak({ text, voice, rate, pitch });
                       }
                     }
@@ -114,10 +115,10 @@ const SpeechSynthesis = (props) => {
                 </div>
                 <div className="parameters-panel">
                   <div className="voice-panel">
-                    <label htmlFor="voiceScript">SCRIPT VOICE</label>
-                    <select
-                      id="voiceScript"
-                      name="voiceScript"
+                    <label htmlFor="voice">VOICE</label>
+                    {/* <select
+                      id="voice"
+                      name="voice"
                       value={voiceIndex || ''}
                       onChange={(event) => {
                         setVoiceIndex(event.target.value);
@@ -131,7 +132,7 @@ const SpeechSynthesis = (props) => {
                           {`${option.lang} - ${option.name}`}
                         </option>
                       ))}
-                    </select>
+                    </select> */}
                   </div>
                   <div className="slider-area">
                     <div className="rate" style={styleContainerRatePitch}>

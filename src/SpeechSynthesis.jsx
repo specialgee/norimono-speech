@@ -17,7 +17,13 @@ const SpeechSynthesis = (props) => {
     onEnd,
   });
 
-  let voice = voices[voiceIndex] || null;
+  let voice;
+  voices.forEach(voiceIndex => {
+    if (voiceIndex.name === "Google 日本語") {
+      //console.log(voiceIndex)
+      voice = voiceIndex;
+    }
+  });
   console.log(voices)
 
   const styleFlexRow = { display: 'flex', flexDirection: 'row' };

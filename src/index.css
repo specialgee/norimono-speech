@@ -108,6 +108,7 @@ button:focus {
 
 .speech-wrapper {
   margin: 0.5em;
+  margin-top: 0;
   font-size: 38px;
 }
 

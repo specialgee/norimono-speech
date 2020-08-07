@@ -76,7 +76,7 @@ textarea:focus {
 
 button {
   font-family: 'MPLUS1p-Medium', sans-serif;
-  font-size: 58px !important;
+  font-size: 44px!important
   width: 100%;
   text-align: center;
   align-self: center;
@@ -130,7 +130,7 @@ button:focus {
 
 .message-label {
   font-family: 'MPLUS1p-Medium', sans-serif;
-  font-size: 84px;
+  font-size: 38px;
   text-align: left;
   letter-spacing: 0.2em;
 }
